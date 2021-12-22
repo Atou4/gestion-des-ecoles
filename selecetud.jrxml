@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.16.0.final using JasperReports Library version 6.16.0-48579d909b7943b64690c65c71e07e0b80981928  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="selecetud" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="81b06aec-e1e9-4e49-bdcc-725065847159">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter "/>
+	<parameter name="id" class="java.lang.String"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT `nume`, `nome`, `prenmoe`, `datee`, `niveau` FROM `etu` WHERE nume= $P{id}  ]]>
+	</queryString>
+	<field name="nume" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="nume"/>
+		<property name="com.jaspersoft.studio.field.label" value="nume"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="etu"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nome" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="nome"/>
+		<property name="com.jaspersoft.studio.field.label" value="nome"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="etu"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="prenmoe" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="prenmoe"/>
+		<property name="com.jaspersoft.studio.field.label" value="prenmoe"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="etu"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="datee" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.name" value="datee"/>
+		<property name="com.jaspersoft.studio.field.label" value="datee"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="etu"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="niveau" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="niveau"/>
+		<property name="com.jaspersoft.studio.field.label" value="niveau"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="etu"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="331" splitType="Stretch">
+			<staticText>
+				<reportElement x="202" y="25" width="150" height="30" uuid="bbedc994-4e62-4e2c-bffa-30566389aa41"/>
+				<textElement>
+					<font fontName="Berlin Sans FB Demi" size="18"/>
+				</textElement>
+				<text><![CDATA[Certificat Scolaire]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="30" y="90" width="140" height="30" uuid="b517a93c-6687-48ee-9402-89894982a9a3"/>
+				<textElement>
+					<font fontName="Segoe UI Black" size="14"/>
+				</textElement>
+				<text><![CDATA[Numero d'etudiant:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="30" y="140" width="140" height="30" uuid="ae41b47e-2e11-49af-9343-e7b1edc316ff"/>
+				<textElement>
+					<font fontName="Segoe UI Black" size="14"/>
+				</textElement>
+				<text><![CDATA[Nom:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="30" y="190" width="140" height="30" uuid="ffb55c78-2882-46e9-b05d-8773cdf0c147"/>
+				<textElement>
+					<font fontName="Segoe UI Black" size="14"/>
+				</textElement>
+				<text><![CDATA[Prenom:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="30" y="240" width="140" height="30" uuid="6820055d-5dca-4756-a0b3-f53eaef80c5f"/>
+				<textElement>
+					<font fontName="Segoe UI Black" size="14"/>
+				</textElement>
+				<text><![CDATA[Date de naissance:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="30" y="292" width="140" height="30" uuid="b47fb7ec-3746-4971-a599-05a2d787e011"/>
+				<textElement>
+					<font fontName="Segoe UI Black" size="14"/>
+				</textElement>
+				<text><![CDATA[Niveau:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="190" y="90" width="111" height="30" uuid="c763e1b1-839c-487d-9272-e40427e78eeb"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nume}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="190" y="138" width="111" height="30" uuid="bfe89126-5173-44b1-aafb-b9c92c81cf6e"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nome}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="190" y="190" width="111" height="30" uuid="ca5b12e4-9d6d-4419-8b5c-1ce3eedd12b1"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{prenmoe}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="190" y="240" width="111" height="30" uuid="51e6a176-b317-41e7-b3da-c09a2183aa87"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{datee}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="190" y="292" width="111" height="30" uuid="217c195f-6a1b-4799-b3ce-3681e4e283a3"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{niveau}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="360" y="5" width="140" height="30" uuid="63c7d31e-bed5-430f-9914-f00458dc859b"/>
+				<textElement>
+					<font fontName="Segoe UI Black" size="14"/>
+				</textElement>
+				<text><![CDATA[Signature:]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+</jasperReport>
